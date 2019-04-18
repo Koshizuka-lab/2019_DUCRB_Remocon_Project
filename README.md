@@ -59,11 +59,11 @@ DLして作業用端末にインストールしてください。
 ### 2.2 Raspberry pi 無線LAN, SSH設定  
 
 OSの書き込みが完了するとSDカードがBOOTという名前で認識されるようになります。  
-SDカードのルートディレクトリに無線LAN設定ファイル(wpa_supplication.conf)を配置しておくと、起動時に自動的に無線LAN設定を実行してるようになります。  
+SDカードのルートディレクトリに無線LAN設定ファイル(wpa_supplicant.conf)を配置しておくと、起動時に自動的に無線LAN設定を実行してるようになります。  
 以下の内容をコピーして、ルートディレクトリに配置してください。  
 
 
-```bash:wpa_supplication.conf
+```bash:wpa_supplicant.conf
 wpa_supplicant.conf
 country=JP
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
