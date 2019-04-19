@@ -64,7 +64,6 @@ SDカードのルートディレクトリに無線LAN設定ファイル(wpa_supp
 
 
 ```bash:wpa_supplicant.conf
-wpa_supplicant.conf
 country=JP
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
