@@ -91,7 +91,8 @@ touch /Volumes/boot/ssh
 ### 2.3 Raspberry pi 起動〜初期設定  
 
 Raspberry pi にssh するためにIPアドレスを調べます(初回のみ実行)。  
-固定IPを割り当てる場合は、以下の作業は必要ありません。  
+固定IPを割り当てる場合やRaspberry piから直接ディスプレイに画面を出力できる場合には、以下の作業は必要ありません。  
+
 #### Macの場合
 IPアドレスを調べるコマンドはいくつかありますが、今回はarp-scanを使った方法について説明します。  
 はじめに、brewを使ってarp-scanをインストールします。
@@ -342,10 +343,9 @@ isaaxのダッシュボードから作成したプロジェクトを選択し、
 
 ### 5.Raspberry pi センサーについて
 
-Raspberry piセンサーについてのサンプルコードは、以下のGitリポジトリに挙げています。
-https://github.com/Koshizuka-lab/2019_DUCRB_Remocon_Kawakami.git
+Raspberry piセンサーについてのサンプルコードは、同Gitリポジトリ内のSensorKitフォルダに挙げています。
 
 動作等については、Excelの参考リンク等を参考に確認してください。  
 また、SensorKitのボックス内にDiscが入っています。その中には、Arduino用のサンプルコードも入っているので、そちらも参考にしてください。
 
-以上！
+以上
