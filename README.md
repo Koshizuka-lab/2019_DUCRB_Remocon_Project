@@ -26,7 +26,7 @@ Raspberry piとSensorKitを用いたダイワユビキタスAPIのオブジェ�
 ### 1.4 使用するクラウドサービス
 
 ◯Github : ソースコード管理  
-　　→https://github.co.jp/  
+　　→https://github.com/  
 　　→https://github.com/Koshizuka-lab :越塚研用Orgnization  
 ◯isaax   : デプロイおよびデバイス監視  
 　　→https://isaax.io/
@@ -35,6 +35,7 @@ Raspberry piとSensorKitを用いたダイワユビキタスAPIのオブジェ�
  Githubのアカウントについては、既に持っている場合はそれを使ってもらっても構いません。  
  isaaxはGithubアカウント連携をすると楽です。　　
  
+発表後の成果物は越塚研用のOrganizationにリポジトリを作成してPushしてもらう予定です。  
 ※越塚研用のOrganizationに参加するための招待メールは、各自の研究室メールアドレスに対して後ほど送ります。  
 
 ## 2. 作業開始
@@ -172,13 +173,13 @@ Localisation Options > Change Timezone > Asia > Tokyo を選択して変更
 <Finish>を選択するには左または右キーを押すと選べます。  
 ```
 
-#### 2.3.5 Raspberry pi Update, Gitインストール
+#### 2.3.5 Raspberry pi Update, Git等インストール
 
 ```bash:RaspberypiUpdate
 pi@raspberrypi:~ $ sudo apt-get update
 pi@raspberrypi:~ $ sudo apt-get -y upgrade
 pi@raspberrypi:~ $ sudo rpi-update
-pi@raspberrypi:~ $ sudo apt-get install -y git
+pi@raspberrypi:~ $ sudo apt-get install -y git python3-pip i2c-tools python3-smbus
 ```  
 
 上記が全て完了すれば初期設定は完了です。  
@@ -190,7 +191,7 @@ GitHubとisaax設定を行なっていきます。
 ### 3.1 GitHub アカウント作成
 
 GitHub公式サイトからアカウントを作成してください。  
-https://github.co.jp/  
+https://github.com/  
 
 なお、個人のアカウントが既にある人はそちらを使っていただいても構いません。  
 
@@ -343,7 +344,19 @@ isaaxのダッシュボードから作成したプロジェクトを選択し、
 
 ### 5.Raspberry pi センサーについて
 
-Raspberry piセンサーについてのサンプルコードは、同Gitリポジトリ内のSensorKitフォルダに挙げています。
+Raspberry piセンサーについてのサンプルコードは、同Gitリポジトリ内のSensorKitフォルダに挙げています。  
+サンプルコードはPython3で記載してありますので、Python2を使う方はご注意ください。  
+
+pythonのサンプルコードを動かす際には、以下のコマンドを実行してから動かしてみてください。  
+
+```bash:
+サンプルコードを動作させる用のライブラリ
+sudo pip3 install rpi.gpio requests 
+
+pythonコマンドでpython3を起動させるためのパス設定
+echo alias python=\"python3\" >> .profile
+source .profile
+```
 
 動作等については、Excelの参考リンク等を参考に確認してください。  
 また、SensorKitのボックス内にDiscが入っています。その中には、Arduino用のサンプルコードも入っているので、そちらも参考にしてください。
