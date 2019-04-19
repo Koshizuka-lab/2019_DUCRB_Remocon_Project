@@ -350,6 +350,8 @@ Raspberry piセンサーについてのサンプルコードは、同Gitリポ�
 pythonのサンプルコードを動かす際には、以下のコマンドを実行してから動かしてみてください。  
 
 ```bash:
+Raspberry piで実行(Raspberry piにSSHしてから実行してください)  
+
 サンプルコードを動作させる用のライブラリ
 sudo pip3 install rpi.gpio requests 
 
