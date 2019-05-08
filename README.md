@@ -182,6 +182,24 @@ pi@raspberrypi:~ $ sudo rpi-update
 pi@raspberrypi:~ $ sudo apt-get install -y git python3-pip i2c-tools python3-smbus
 ```  
 
+#### 2.3.6 マシン名変更
+/etc/hosts, /etc/hostname のファイルに記載されてあるマシン名を変更します。
+
+```bash:machineNameUpdate
+$ sudo vi /etc/hosts
+
+127.0.1.1       raspberrypi
+raspberrypi を変更したいマシン名に書き換えて保存
+
+
+$ sudo vi /etc/hostname
+
+raspberrypi を変更したいマシン名に書き換えて保存
+
+$ sudo reboot
+再起動が完了するとマシン名が指定したものに変更されます。
+```
+
 上記が全て完了すれば初期設定は完了です。  
 
 ## 3. GitHub, isaax初回設定
