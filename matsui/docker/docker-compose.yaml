@@ -1,0 +1,15 @@
+version: '3'
+services:
+  elm:
+    build: ./elm
+    volumes:
+      - ../src:/app/src
+      - ../elm.json:/app/elm.json
+      - ../.babelrc:/app/.babelrc
+      - ../webpack.config.js:/app/webpack.config.js
+    ports:
+      - 3000:3000
+      - 3002:3002
+    environment:
+      - NODE_ENV=develop
+    command: [/bin/sh] #[yarn, dev, --host, 0.0.0.0, --config, ./webpack.config.js ]
